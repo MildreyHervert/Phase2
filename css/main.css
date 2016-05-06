@@ -1,12 +1,15 @@
 
+@import url(https://fonts.googleapis.com/css?family=Teko:400,300);
+@import url(https://fonts.googleapis.com/css?family=Titillium+Web:300);
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
 
 body {
 	margin: 0;
 	text-align: center;
 }
 
-.invisible {
-	
+a {
+	text-decoration: none;
 }
 
 /* Main Header */
@@ -69,7 +72,7 @@ body {
 h1 {
 	font: 120px Teko, open-sans;
 	color: #fff;
-	width: 1170px;
+	width: 1242px;
 	margin: 0 auto;
 	letter-spacing: 17px;
 	line-height: 152px;
@@ -107,7 +110,7 @@ h1 {
 
 .heroNav {
 	position: relative;
-    top: 49%;
+    top: 50%;
 }
 
 .heroNav li, .heroNav ul {
@@ -122,6 +125,11 @@ h1 {
 	display: inline;
 	padding: 0;
     margin: 0px 10px 0 0;
+
+     width: 41px;
+    border: 2px #fff solid;
+    display: inline-block;
+    opacity: 0.22;
 }
 
 .heroNav li:last-child {
@@ -129,13 +137,10 @@ h1 {
 }
 
 .heroNav div{
-    width: 41px;
-    border: 2px #fff solid;
-    display: inline-block;
-    opacity: 0.22;
+   
 }
 
-.heroNav div.active {
+.heroNav li.active {
     opacity: 1;
 }
 
@@ -149,12 +154,12 @@ h1 {
 .myProjects header {
 	font: 40px Teko, open-sans;
 	color: #000;
-	margin: 53px 0 53px;
+	margin: 53px 0 30px;
 	font-weight: bold;
     letter-spacing: 5px;
 }
 
-.myProjects figure {
+.myProjects article {
 	width: 50%;
 	height: 630px;
 	display: inline-block;
@@ -162,12 +167,23 @@ h1 {
 
 }
 
-.myProjects figcaption {
+h3 {
+	margin-bottom: 1px;
+}
+
+h3 a {
 	font: 30px Teko, open-sans;
 	color: #000;
 	letter-spacing: 3px;
     font-weight: bold;
     margin: 19px 0 0 0;
+}
+
+figure {
+	width: 100%;
+    margin: 0 0 0 0;
+    padding: 15px 20px 15px 20px;
+    box-sizing: border-box;
 }
 
 .myProjects figure p {
@@ -179,21 +195,23 @@ h1 {
 }
 .project {	
 	height: 503px;
-	width: 924px;
+	width: 100%;
 	padding: 20px 20px 20px 20px;
     box-sizing: border-box;
 }
 
 .portfolio1 {
 	background-image: url("../img/project1.jpg");
-	background-size: 100%;
-	background-repeat: no-repeat;
+	background-size: 112%;
+    background-repeat: no-repeat;
+    background-position: -9px -42px;
 }
 
 .portfolio2 {
 	background-image: url("../img/project2.jpg");
 	background-size: 100%;
 	background-repeat: no-repeat;
+	background-position: 0px -796px;
 }
 
 .portfolio3 {
@@ -204,8 +222,9 @@ h1 {
 
 .portfolio4 {
 	background-image: url("../img/project4.jpg");
-	background-size: 100%;
-	background-repeat: no-repeat;
+	background-size: 136%;
+    background-repeat: no-repeat;
+    background-position: -195px -328px;
 }
 
 .reduLink {
@@ -223,6 +242,10 @@ h1 {
 	margin: 0 auto;
 }
 
+.projectsFooter {
+	margin-top: 28px;
+}
+
 .hoverProject {
 	opacity: 0;
 	background-color: #f63c3c;
@@ -236,7 +259,7 @@ h1 {
     letter-spacing: 3px;
 }
 
-.myProjects figure:hover figcaption{
+.myProjects figure:hover h3 a{
 	color: #f63c3c;
 }
 
@@ -297,6 +320,10 @@ h2 {
 	margin: 0 0 60px 0;
 }
 
+.stayConnected ul {
+	 padding: 0;
+}
+
 .socialMedia {
 	width: 270px;
 	height: 196px;
@@ -309,6 +336,10 @@ h2 {
     text-align: center;
 }
 
+.socialMedia a {
+	color: #fff;
+}
+
 .socialMedia .fa {
 	display: block;
     padding-top: 47px;
@@ -318,7 +349,7 @@ h2 {
 
 /* Footer */
 
-footer {
+.mainFooter {
 	font: lighter 13px Titillium Web, open-sans;
 	color: #555;
 	text-align: left;
