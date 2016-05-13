@@ -3,10 +3,19 @@
 @import url(https://fonts.googleapis.com/css?family=Titillium+Web:300);
 @import url(https://fonts.googleapis.com/css?family=Roboto:300);
 
+* {
+	box-sizing: border-box;
+}
+
+html {
+	font-size:16px;
+
+}
 body {
 	margin: 0;
 	text-align: center;
 }
+
 
 a {
 	text-decoration: none;
@@ -15,23 +24,30 @@ a {
 /* Main Header */
 
 .mainHeader {
-	width: 1185px;
+	max-width: 1185px;
 	margin: 0 auto;
 	text-align: left;
 }
 
 .mainHeader img, .mainHeader nav {
 	display: inline-block;
-    vertical-align: middle;
+	vertical-align: middle;
+}
+
+.mainHeader img{
+	display: inline-block;
+	vertical-align: middle;
+	float: left;
 }
 
 .mainHeader nav {
 	float: right;
-    margin-top: 1.8%;
+	margin-top: 1.8%;
 }
 
 .mainNavigation, .mainNavigation ul {
 	display: inline;
+	padding: 0;
 }
 
 .mainNavigation li {
@@ -49,7 +65,7 @@ a {
 .mainNavigation a.active {
 	color: #f63c3c;
 	border-bottom: 4px #f63c3c solid;
-    padding-bottom: 21px;
+	padding-bottom: 21px;
 }
 
 .linkHover {
@@ -70,31 +86,38 @@ a {
 }
 
 h1 {
-	font: 120px Teko, open-sans;
+	font: lighter 7em Teko, open-sans;
 	color: #fff;
-	width: 1242px;
 	margin: 0 auto;
 	letter-spacing: 17px;
-	line-height: 152px;
+	line-height: 1.2em;
+	width: 83%;
+	display: inline-block;
 }
 
 .heroHeader p {
 	font: lighter 22px Titillium Web, open-sans;
 	color: rgba(256,256,256,0.7);
-	width: 720px;
-	margin: 0 auto 50px;
+	width: 50%;
+	margin-top: 50px;
+	display: inline-block;
 }
 
-.heroHeader div {
-    top: 25%;
-    position: relative;
-    margin: 0 auto;
+.heroContent {
+	position: absolute;
+	transform: translate(-50%, -50%);
+	left: 50%;
+	top: 50%;
+	width: 79%;
+	text-align: center;
+	height: 35%;
 }
+
 
 .whiteLink {
 	width: 230px;
 	height: 50px;
-	padding: 12px 72px 12px;
+	padding: 12px 47px;
 	background-color: #fff;
 	text-align: center;
 	font: 20px Teko, open-sans;
@@ -102,6 +125,8 @@ h1 {
 	letter-spacing: 4px;
 	color: #000;
 	text-decoration: none;
+	display: block;
+	margin: 0 auto;
 }
 
 .getInTouch{
@@ -110,45 +135,47 @@ h1 {
 
 .heroNav {
 	position: relative;
-    top: 50%;
+	top: 65%;
 }
 
 .heroNav li, .heroNav ul {
 	list-style-type: none;
 	display: inline;
 	padding: 0;
-    margin: 0;
+	margin: 0;
 }
 
 .heroNav li {
 	list-style-type: none;
 	display: inline;
 	padding: 0;
-    margin: 0px 10px 0 0;
+	margin: 0px 10px 0 0;
 
-     width: 41px;
-    border: 2px #fff solid;
-    display: inline-block;
-    opacity: 0.22;
+	width: 41px;
+	border: 2px #fff solid;
+	display: inline-block;
+	opacity: 0.22;
 }
 
 .heroNav li:last-child {
-    margin: 0px;
+	margin: 0px;
 }
 
 .heroNav div{
-   
+
 }
 
 .heroNav li.active {
-    opacity: 1;
+	opacity: 1;
 }
 
 /* My Projects */
 
 .myProjects {
-	height: 1435px;
+	box-sizing: border-box;
 	width: 100%;
+	padding-left: 1%;
+	padding-right: 1%;
 }
 
 .myProjects header {
@@ -156,15 +183,16 @@ h1 {
 	color: #000;
 	margin: 53px 0 30px;
 	font-weight: bold;
-    letter-spacing: 5px;
+	letter-spacing: 5px;
 }
 
 .myProjects article {
-	width: 50%;
-	height: 630px;
+	width: 49.5%;
 	display: inline-block;
-	margin: 0;
+}
 
+.myProjects article:nth-child(even) {
+	margin-right:1%;
 }
 
 h3 {
@@ -175,36 +203,36 @@ h3 a {
 	font: 30px Teko, open-sans;
 	color: #000;
 	letter-spacing: 3px;
-    font-weight: bold;
-    margin: 19px 0 0 0;
+	font-weight: bold;
+	margin: 19px 0 0 0;
 }
 
 figure {
 	width: 100%;
-    margin: 0 0 0 0;
-    padding: 15px 20px 15px 20px;
-    box-sizing: border-box;
+	margin: 0 0 0 0;
+	box-sizing: border-box;
+	padding-bottom: 28px;
 }
 
 .myProjects figure p {
 	font: lighter 14px Titillium Web, open-sans;
 	color: #555;
 	margin: 0px auto;
-	width: 510px;
+	width: 56%;
 	line-height: 17px;
 }
 .project {	
 	height: 503px;
 	width: 100%;
-	padding: 20px 20px 20px 20px;
-    box-sizing: border-box;
+	padding: 20px;
+	box-sizing: border-box;
 }
 
 .portfolio1 {
 	background-image: url("../img/project1.jpg");
 	background-size: 112%;
-    background-repeat: no-repeat;
-    background-position: -9px -42px;
+	background-repeat: no-repeat;
+	background-position: -9px -42px;
 }
 
 .portfolio2 {
@@ -223,16 +251,16 @@ figure {
 .portfolio4 {
 	background-image: url("../img/project4.jpg");
 	background-size: 136%;
-    background-repeat: no-repeat;
-    background-position: -195px -328px;
+	background-repeat: no-repeat;
+	background-position: -195px -328px;
 }
 
 .reduLink {
 	font: 20px Teko, open-sans;
 	color: #f63c3c;
 	font-weight: bold;
-    letter-spacing: 3px;
-    text-decoration: none;
+	letter-spacing: 3px;
+	text-decoration: none;
 }
 
 .redlinkBar {
@@ -250,13 +278,13 @@ figure {
 	opacity: 0;
 	background-color: #f63c3c;
 	height: 100%;
-    width: 100%;
+	width: 100%;
 	z-index: 2;
 	font: lighter 24px Teko, open-sans;
 	color: #fff;
-	padding-top: 19%;
-    box-sizing: border-box;
-    letter-spacing: 3px;
+	padding: 19% 0;
+	box-sizing: border-box;
+	letter-spacing: 3px;
 }
 
 .myProjects figure:hover h3 a{
@@ -273,7 +301,7 @@ figure {
 }
 
 .hoverProject p.details {
-	font: lighter 18px Teko, open-sans;
+	font: lighter 1em Teko, open-sans;
 	color: #fff;
 	margin-top: 8%;
 }
@@ -285,8 +313,8 @@ h2 {
 	font: lighter 40px Teko, open-sans;
 	color: #fff;
 	letter-spacing: 4px;
-	padding: 55px 0 0;
-    margin-bottom: 0;
+	padding: 55px 35px 0 35px;
+	margin-bottom: 0;
 }
 
 .showcasing {
@@ -304,14 +332,15 @@ h2 {
 
 .stayConnected {
 	padding: 60px 18% 60px 18%;
-    text-align: left;
+	text-align: left;
+	padding: 60px 6% 60px 6%;
 }
 
 .stayConnected header {
 	font: 40px Teko, open-sans;
 	color: #000;
 	font-weight: bold;
-    letter-spacing: 6px;
+	letter-spacing: 6px;
 }
 
 .stayConnected p {
@@ -321,19 +350,28 @@ h2 {
 }
 
 .stayConnected ul {
-	 padding: 0;
+	padding: 0;
+	margin: 0;
+}
+
+.stayConnected li {
+	margin-top: 16px;
+	width: 24.25%;
+	margin-right: 1%;
+}
+
+.stayConnected li:last-child {
+	margin-right: 0;
 }
 
 .socialMedia {
-	width: 270px;
 	height: 196px;
 	background-color: #30282a;
 	display: inline-block;
-    margin: 0 30px 0 0;
-    font: lighter 30px Teko, open-sans;
-    color: #fff;
-    letter-spacing: 4px;
-    text-align: center;
+	font: lighter 30px Teko, open-sans;
+	color: #fff;
+	letter-spacing: 4px;
+	text-align: center;
 }
 
 .socialMedia a {
@@ -342,9 +380,9 @@ h2 {
 
 .socialMedia .fa {
 	display: block;
-    padding-top: 47px;
+	padding-top: 47px;
 	font-size: 54px;
-    padding-bottom: 5px;
+	padding-bottom: 5px;
 }
 
 /* Footer */
@@ -353,9 +391,221 @@ h2 {
 	font: lighter 13px Titillium Web, open-sans;
 	color: #555;
 	text-align: left;
-    padding-left: 18%;
-    margin: 0 0 38px 0;
+	margin-left: 6%;
+}
 
+.clearfix:before,
+.clearfix:after {
+	content: "";
+	display: table;
+} 
+.clearfix:after {
+	clear: both;
 }
 
 
+/* Media queries */
+
+
+@media screen and (max-width: 1024px) {
+
+	html {
+		font-size: 9px;
+	}
+	h1 {
+		/* font: lighter 334% Teko, open-sans;
+		line-height: 126%;*/
+		width: 100%;
+	}	
+	.heroHeader {
+		height: 566px;
+	}
+
+	.heroHeader p{
+		width: 100%;
+	}
+
+	.heroNav {
+		top: 11%;
+	}
+
+	.project {
+	    height: 100%;	
+	}
+
+	.hoverProject {
+	    padding: 10% 0;
+	}
+
+	.portfolio2 {
+		background-position: 0px -427px;
+	}
+
+	.portfolio4 {
+		background-position: -127px -139px;
+	}
+
+	.hoverProject p.details {
+    	font-size: 0.7em ;
+	}
+
+	h2 {
+		font-size: 4.5em; 
+	}
+}
+
+@media screen and (max-width: 768px) {
+	
+	html {
+		font-size: 5px;
+	}
+
+	.heroHeader {
+		height: 422px;
+	}
+
+	.heroHeader p {
+		font: lighter 4em Titillium Web, open-sans;
+	}
+
+	.heroContent {
+		height: 68%;
+	}
+
+	.heroNav {
+		top: 5%;
+	}
+
+	.myProjects article {
+	    width: 100%;
+	    display: block;
+	}
+
+	figure {
+	    width: 75%;
+	    margin: 0 auto;
+	}
+
+	h2 {
+		font-size: 6.5em;
+	}
+
+}
+
+@media screen and (max-width: 640px) {
+
+	html {
+		font-size: 4px;
+	}
+	.heroNav {
+		display: none;
+	 }
+
+	.mainNavigation li{
+		display: block;
+	}	
+	.mainNavigation a.active{
+		color: #fff;
+	}	
+	.mainHeader {
+		background-color: #EF3C40;
+	}
+	.heroHeader {
+		height: 351px;
+	}
+
+	.heroContent {
+		height: 56%;
+	}
+
+	.myProjects figure p{
+		width: 85%;
+	}
+
+	.stayConnected li {
+	    width: 49.5%;
+	}
+	.stayConnected li:nth-child(even) {
+	    margin-right: 0;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	html {
+		font-size: 5px;
+	}
+
+	p.heroDetails, .explore, .hoverProject p.details {
+		display: none;
+	}
+
+	.heroHeader {
+		height: 261px;
+	}
+
+	.heroContent {
+		top: 36%;
+		height: 21%;
+	}
+
+	.myProjects header {
+	 	margin: 30px 0 22px;
+	 }
+
+	 figure {
+	 	 width: 100%;
+	 }
+
+	.showcasing p {
+		display:none;
+	}
+
+	.stayConnected header {
+		text-align: center;
+	}
+}
+
+@media screen and (max-width: 320px) {
+	html {
+		font-size: 3px;
+	}
+
+	.projectDetail {
+		display: none;
+	}
+
+	.heroHeader {
+		height: 170px;
+	}
+
+	.heroContent {
+		top: 52%;
+	}
+
+	h1 {
+		letter-spacing: 10px;
+	}
+	
+	.hoverProject p{
+		display:none;
+	}
+
+	.portfolio2 {
+		background-position: 0px -268px;
+	}
+
+	.portfolio4 {
+		background-position: -75px -83px;
+	}
+
+	h2 {
+		font-size: 25px;
+	    padding: 55px 35px 15px 35px;
+	}
+
+	.stayConnected li {
+	    width: 100%;
+	    margin-right: 0;
+	}
+
+}
